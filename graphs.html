@@ -1,0 +1,40 @@
+<html><head><title>The Twitter Project</title><script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js'></script><style>div{width:600px; height:600px; display:inline-block; margin-left:150px;} canvas{margin-top:100px;} h1,h2 {margin:100px; text-align:center;}</style></head><body><h1>Sentiment Scores for Search Query: Mo Salah</h1><div><h2>Overall Sentiment Results</h2><canvas id='result1'></canvas></div><div><h2>Stanford Core NLP Sentiment Results</h2><canvas id='result2'></canvas></div><div><h2>Lingpipe Sentiment Results</h2><canvas id='result3'></canvas></div><script>var ctx = document.getElementById('result1').getContext('2d'); 
+var chart = new Chart(ctx, { 
+type: 'pie', 
+ data: { 
+labels: ['Truly Positive', 'Positive', 'Negative', 'Truly Negative'], 
+datasets: [{ 
+label: 'My First dataset', 
+backgroundColor: ['#1B5E20', '#66BB6A', '#FF9800', '#E65100'], 
+data: [0, 4, 5, 4], 
+}] 
+}, 
+options: {} 
+}); 
+var ctx = document.getElementById('result2').getContext('2d'); 
+var chart = new Chart(ctx, { 
+type: 'pie', 
+ data: { 
+labels: ['Positive', 'Neutral', 'Negative'], 
+datasets: [{ 
+label: 'My First dataset', 
+backgroundColor: ['#1B5E20', '#66BB6A', '#E65100'], 
+data: [0, 8, 5], 
+}] 
+}, 
+options: {} 
+}); 
+var ctx = document.getElementById('result3').getContext('2d'); 
+var chart = new Chart(ctx, { 
+type: 'pie', 
+ data: { 
+labels: ['Positive', 'Negative'], 
+datasets: [{ 
+label: 'My First dataset', 
+backgroundColor: ['#1B5E20', '#E65100'], 
+data: [5, 8], 
+}] 
+}, 
+options: {} 
+}); 
+</script></body></html>
